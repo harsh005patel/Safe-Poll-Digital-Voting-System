@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Election Bulletin Board</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 20px;
+    }
+    .bulletin-board {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .entry {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    .entry strong {
+      color: #000;
+    }
+    .result {
+      font-size: 1.5rem;
+      color: #007BFF;
+      margin-top: 10px;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Election Bulletin Board</h1>
+  <div class="bulletin-board">
+    <div class="entry">
+      <p>Public Key: <strong><%= public_key %></strong></p>
+    </div>
+    <div class="entry">
+      <p>Number of Votes: <strong><%= votes %></strong></p>
+    </div>
+    <div class="entry">
+      <p>Lead By: <strong><%= d %></strong></p>
+    </div>
+    <div class="entry">
+      <p class="result">Result: <strong><%= result %></strong></p>
+    </div>
+  </div>
+  <a href="/">Back to Home</a>
+</body>
+</html>
